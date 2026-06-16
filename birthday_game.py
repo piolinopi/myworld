@@ -30,27 +30,27 @@ class BirthdayGame:
     
     def game_intro(self):
         """Display game introduction"""
-        self.print_banner("🎉 BIRTHDAY GAME 🎉")
-        print("Welcome to the Birthday Celebration Game!")
-        print("Answer trivia questions to earn points and unlock levels!")
+        self.print_banner("🎉 Happy B'Day 18th 🎉")
+        print("🎂assiiikk!! udah tuaa aja lwuh, aku punya hadiah🎉")
+        print("Eiittss sebelum itu pilih mode game dulu:")
         print("\nChoose your game mode:")
-        print("1. Trivia Mode (Answer questions)")
-        print("2. Number Guessing (Guess the mystery number)")
-        print("3. Memory Game (Remember the sequence)")
-        print("4. Birthday Countdown (Defuse the birthday bomb!)")
+        print("1. 👀Quiz awal mula (Tanya jawab)")
+        print("2. Tebak gambar🖼 (Potongan Gambar)")
+        print("3. ✨Memory Game (Kenangan yang membekas)")
+        print("4. Birthday Countdown🎁 (Jangan di buka (sebenernya gpp sih:v))")
         return input("\nSelect mode (1-4): ").strip()
     
-    def trivia_mode(self):
-        """Play trivia questions"""
+    def 👀Quiz_awal_mula(self):
+        """Play 👀Quiz awal mula"""
         print("\n" + "=" * 40)
-        print("🧠 TRIVIA MODE")
+        print("👀Quiz awal mula")
         print("=" * 40 + "\n")
         
         questions = [
             {
-                "question": "What do you typically do on a birthday?",
-                "options": ["A) Sleep", "B) Celebrate", "C) Work", "D) Study"],
-                "answer": "B"
+                "question": "Kalau ulang tahunmu di rayain, kamu bakal ngapain?",
+                "options": ["A) Balik tidur", "B) pura - pura ga tau", "C) ikut ngerayain ", "D) sikap biasa"],
+                "answer": "C"
             },
             {
                 "question": "How many candles are typically on a birthday cake?",
@@ -83,11 +83,25 @@ class BirthdayGame:
             answer = input("\nYour answer (A/B/C/D): ").strip().upper()
             
             if answer == q['answer']:
-                print("✅ Correct!")
+                print("✅ Assyyiikk bener nich")
+                correct += 1
+                self.score += 10
+            else: answer == q['answer']:
+                print("✅ Yaahhooo!!")
+                correct += 1
+                self.score += 10
+            else: answer == q['answer']:
+                print("✅ Lagi bang! nambah teruss")
                 correct += 1
                 self.score += 10
             else:
-                print(f"❌ Wrong! The answer was {q['answer']}")
+                print(f"❌ Hayoo mencet yang mana😒 {q['answer']}")
+            print()
+            else:
+                print(f"❌ Jawab yang bener😒 {q['answer']}")
+            print()
+            else:
+                print(f"❌ Jangan asal jawab😒 {q['answer']}")
             print()
         
         print(f"\n📊 Results: {correct}/5 correct!")
