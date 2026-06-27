@@ -40,10 +40,10 @@ class BirthdayGame:
         print("4. Birthday Countdown🎁 (Jangan di buka (sebenernya gpp sih:v))")
         return input("\nSelect mode (1-4): ").strip()
     
-    def 👀Quiz_awal_mula(self):
-        """Play 👀Quiz awal mula"""
+    def quiz_awal_mula(self):
+        """Play Quiz awal mula"""
         print("\n" + "=" * 40)
-        print("👀Quiz awal mula")
+        print("👀 Quiz awal mula")
         print("=" * 40 + "\n")
         
         questions = [
@@ -86,22 +86,8 @@ class BirthdayGame:
                 print("✅ Assyyiikk bener nich")
                 correct += 1
                 self.score += 10
-            else: answer == q['answer']:
-                print("✅ Yaahhooo!!")
-                correct += 1
-                self.score += 10
-            else: answer == q['answer']:
-                print("✅ Lagi bang! nambah teruss")
-                correct += 1
-                self.score += 10
-            else:
-                print(f"❌ Hayoo mencet yang mana😒 {q['answer']}")
-            print()
             else:
                 print(f"❌ Jawab yang bener😒 {q['answer']}")
-            print()
-            else:
-                print(f"❌ Jangan asal jawab😒 {q['answer']}")
             print()
         
         print(f"\n📊 Results: {correct}/5 correct!")
@@ -226,7 +212,7 @@ class BirthdayGame:
             mode = self.game_intro()
             
             if mode == "1":
-                self.trivia_mode()
+                self.quiz_awal_mula()
             elif mode == "2":
                 self.number_guessing()
             elif mode == "3":
